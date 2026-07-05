@@ -1,0 +1,488 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yah Elohim · Blog de Armonía y Poder</title>
+  <style>
+    /* ===== style.css ===== */<!DOCTYPE html>
+<html lang="es">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', 'Times New Roman', Georgia, serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #071425, #163a5a 55%, #0d2544);
+      color: #f0f4ff;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .blog-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, rgba(13, 34, 61, 0.95), rgba(22, 53, 90, 0.92));
+      backdrop-filter: blur(2px);
+      border-radius: 32px 32px 16px 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.75);
+      padding: 25px 30px 40px;
+      border: 1px solid #5f8fb8;
+    }
+
+    /* BANNER con Torá */
+    .banner-torah {
+      background: linear-gradient(135deg, #1b3f67, #0f2743 60%, #7a4a1d);
+      border-radius: 60px 60px 30px 30px;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 4px solid #d4b87a;
+      box-shadow: inset 0 -6px 0 #2f5f8a, 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .banner-icon {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .banner-photo {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 50%;
+      border: 3px solid #f5e3b0;
+      box-shadow: 0 0 18px rgba(245, 227, 176, 0.35);
+      flex-shrink: 0;
+      background: #0a1a2a;
+    }
+
+    .torah-svg {
+      width: 80px;
+      height: auto;
+      filter: drop-shadow(0 0 8px #f5e6b0);
+    }
+
+    .banner-text {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, #fff2c8, #f0c46a, #e7a84c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 20px rgba(218, 184, 112, 0.3);
+    }
+
+    .banner-sub {
+      color: #dfefff;
+      font-style: italic;
+      border-left: 2px solid #f1c96f;
+      padding-left: 20px;
+      font-size: 1.1rem;
+    }
+
+    /* MENÚ SUPERIOR */
+    .menu-servicio {
+      background: #0d2647;
+      border-radius: 60px;
+      padding: 12px 25px;
+      margin-bottom: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px 30px;
+      border: 1px solid #3e74a8;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .menu-servicio a {
+      color: #e2edff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 6px 12px;
+      border-radius: 40px;
+      transition: 0.3s;
+      background: transparent;
+      letter-spacing: 1px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .menu-servicio a:hover {
+      background: #2a5a88;
+      color: #f9f3d9;
+      border-bottom: 2px solid #eac88a;
+      transform: scale(1.02);
+    }
+
+    .menu-servicio .destacar {
+      background: #b58b44;
+      color: #0a1a2a;
+      padding: 6px 20px;
+      border-radius: 40px;
+      font-weight: 700;
+    }
+
+    /* 7 ENTRADAS */
+    .entradas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0 30px;
+    }
+
+    .entrada-card {
+      background: #122f54;
+      padding: 20px 18px;
+      border-radius: 30px;
+      border-left: 8px solid #d4b16a;
+      box-shadow: 0 8px 0 #0a1d36, 0 12px 24px rgba(0,0,0,0.5);
+      transition: 0.2s;
+      backdrop-filter: blur(2px);
+    }
+
+    .entrada-card:hover {
+      transform: translateY(-6px);
+      border-left: 8px solid #f5d48a;
+      background: #1a3f68;
+      box-shadow: 0 12px 0 #0f2844, 0 18px 30px #00000077;
+    }
+
+    .entrada-card h3 {
+      font-size: 1.6rem;
+      color: #f5e3b0;
+      margin-bottom: 12px;
+      border-bottom: 2px dotted #6b94c0;
+      padding-bottom: 6px;
+    }
+
+    .entrada-card p {
+      color: #dceaff;
+      font-size: 0.98rem;
+    }
+
+    .entrada-card .iconito {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 6px;
+      color: #dbbd7a;
+    }
+
+    .trono-armonia {
+      background: #0f294b;
+      border-radius: 40px;
+      padding: 20px 28px;
+      margin: 20px 0 35px;
+      border: 1px solid #b89f5e;
+      box-shadow: inset 0 0 30px #142f55;
+    }
+
+    .trono-armonia h2 {
+      color: #f3dfa8;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .trono-armonia p {
+      font-size: 1.05rem;
+      color: #d1e5ff;
+    }
+
+    .contacto-rabino {
+      background: #0b2342;
+      border-radius: 60px;
+      padding: 18px 30px;
+      margin: 40px 0 25px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #b49044;
+    }
+
+    .contacto-rabino .rabino-nombre {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f5e7c1;
+    }
+
+    .contacto-rabino .rabino-detalle {
+      color: #b6d6f0;
+    }
+
+    .contacto-rabino .cel {
+      background: #2a5a7a;
+      padding: 8px 22px;
+      border-radius: 60px;
+      font-weight: 600;
+      color: #fef7e0;
+      border: 1px solid #dbbd7a;
+    }
+
+    .valores-box {
+      background: #13355c;
+      border-radius: 30px;
+      padding: 20px 25px;
+      margin: 25px 0;
+      border-left: 10px solid #dbbd7a;
+    }
+
+    .valores-box h3 {
+      color: #f3dfa8;
+      font-size: 1.8rem;
+    }
+
+    .valores-box span {
+      color: #ffefc0;
+      font-weight: 600;
+    }
+
+    .color-amor { color: #f5b8b8; }
+    .color-poder { color: #b8d9ff; }
+    .color-bondad { color: #b4e6b4; }
+    .color-progreso { color: #f5d78a; }
+    .color-evolucion { color: #caa8f0; }
+
+    /* FOOTER con mención de rabino y desarrollador */
+    .footer-blog {
+      text-align: center;
+      margin-top: 40px;
+      border-top: 2px solid #2f5f8a;
+      padding-top: 25px;
+      font-size: 1rem;
+      color: #b8d9f0;
+    }
+
+    .footer-blog .rabino-dev {
+      display: inline-block;
+      background: #102f52;
+      padding: 8px 28px;
+      border-radius: 60px;
+      border: 1px solid #b49044;
+      color: #f5e7c1;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-top: 6px;
+      box-shadow: 0 0 12px rgba(180, 144, 68, 0.2);
+    }
+
+    .footer-blog .rabino-dev i {
+      font-style: normal;
+      color: #dbbd7a;
+    }
+
+    /* ARTÍCULOS - Secciones temáticas */
+    .articulo-seccion {
+      background: #0f2849;
+      border-radius: 25px;
+      padding: 30px 28px;
+      margin: 30px 0;
+      border-left: 6px solid #d4b87a;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .articulo-seccion h2 {
+      color: #f5d48a;
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+      border-bottom: 2px dotted #6b94c0;
+      padding-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .articulo-seccion p {
+      color: #d1e5ff;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .articulo-seccion p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+      .banner-text { font-size: 1.6rem; }
+      .menu-servicio { gap: 8px; }
+      .articulo-seccion { padding: 20px 18px; }
+      .articulo-seccion h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="blog-wrapper">
+<p>El AMOR DE DIOS ES MARAVILLOS
+  Nada puedo hacer sin el. debo llevar el amo de Dios siempre.
+  sin el amor de Dios nadie serìa salvo.<salvo class="br"></salvo>
+  p
+</p>
+
+  <!-- BANNER con Torá (SVG) -->
+<div class="banner-torah">
+  <div class="banner-icon">
+    <img src="img/romer.jpg.jpg" alt="Romer Rafael Ayala" class="banner-photo">
+    <div>
+      <div class="banner-text">Yah Elohim · Blog</div>
+      <div class="banner-sub">Rabino Romer Rafael Ayala Cuevas</div>
+    </div>
+  </div>
+</div>
+    <div style="color:#f9dfb0; font-style:italic; font-size:0.95rem; font-weight:600;">“Él es el principio y el fin”</div>
+
+  <!-- MENÚ superior -->
+  <div class="menu-servicio">
+    <a href="concepto.html">📖 Concepto</a>
+    <a href="necesitados.html">🤲 A los necesitados</a>
+    <a href="educacion-judia.html">🕯️ Educación judía</a>
+    <a href="doctrina.html" class="destacar">📜 Doctrina</a>
+    <a href="valores-humanos.html">✡️ Valores Humanos</a>
+    <a href="armonìa.html">🌿 Armonía</a>
+  </div>
+
+  <!--  ENTRADAS: trono y armonía -->
+  <h2 style="color: #dbbd7a; font-size: 2.0rem; margin: 10px 0 0 0;">👑 7 Entradas · Su Trono y Armonía</h2>
+  <div class="entradas-grid">
+    <div class="entrada-card"><span class="iconito">1️⃣</span><h3>Kavod</h3><p><span class="color-poder">Poder</span> divino que sostiene la creación. Yah Elohim reina en majestad. Ama todo lo creado por èl, porque el es Dios</p></div>
+    <div class="entrada-card"><span class="iconito">2️⃣</span><h3>Jesed</h3><p><span class="color-bondad">Bondad</span> eterna, su misericordia alcanza a toda la humanidad. Sin èl nadie puede alcanzar larga vida y plenitud.</p></div>
+    <div class="entrada-card"><span class="iconito">3️⃣</span><h3>Amor</h3><p><span class="color-amor">Ahavá</span> que trasciende, su amor es la esencia del progreso, y del  crecimiento espiritual.</p></div>
+    <div class="entrada-card"><span class="iconito">4️⃣</span><h3>Progreso</h3><p><span class="color-progreso">Tikún Olam</span> – reparación y evolución constante del ser. Siempre yah, mejora la vida, y dad salud, al desvalido.</p></div>
+    <div class="entrada-card"><span class="iconito">5️⃣</span><h3>Naturaleza</h3><p>En cada hoja y río, <span class="color-evolucion">armonía</span> de Yah; su huella en la creación. de sobrada forma el amor de su existencia.</p></div>
+    <div class="entrada-card"><span class="iconito">6️⃣</span><h3>Trono</h3><p>Asiento de justicia y verdad, su gobierno es <span class="color-poder">poder</span> y paz.</p></div>
+    <div class="entrada-card"><span class="iconito">7️⃣</span><h3>Armonía</h3><p>Shalom con los hombres, pacto de amor y <span class="color-bondad">bondad</span> infinita y tambièn inteligencia.</p></div>
+  </div>
+
+  <!-- Trono y armonía (profundiza) -->
+  <div class="trono-armonia">
+    <h2>👁️ Su Trono · Armonía con los hombres</h2>
+    <p><span class="color-poder">Yah Elohim</span> establece su trono en la justicia y la misericordia. <br>
+    <span class="color-amor">Su armonía</span> con la humanidad se manifiesta en la Torá, guía para la vida, y en el aliento de cada criatura. <br>
+    <span class="color-progreso">Progreso y evolución</span> son su diseño: la creación se despliega en orden y belleza, invitándonos a ser co-creadores en bondad.</p>
+  </div>
+
+  <!-- Valores humanos / evangelístico judío -->
+  <div class="valores-box">
+    <h3>✡️ Valores Humanos · Evangelístico Judío</h3>
+    <p><span>Tzedaká (Justicia)</span> · <span>Jesed (Amor bondadoso)</span> · <span>Emuná (Fe)</span> · <span>Shalom (Paz)</span> · <span>Tikvá (Esperanza)</span> <br>
+    La doctrina de Yah Elohim nos llama a ser luz para las naciones, reflejando su bonda siempre.<span class="color-bondad">bondad</span> y <span class="color-amor">amor</span> en cada acción. El mensaje evangélico judío es de restauración y unidad.</p>
+  </div>
+
+  <!-- CONTACTO Rabino Romer Rafael Ayala Cuevas -->
+  <div class="contacto-rabino">
+    <div>
+      <span class="rabino-nombre">🕯️ Rabino Romer Rafael Ayala Cuevas</span>
+      <div class="rabino-detalle">Director de Educación · Doctrina y Armonía</div>
+    </div>
+    <div class="cel">📱 809-215-4245</div>
+  </div>
+
+  <!-- ===== ARTÍCULOS TEMÁTICOS ===== -->
+
+  <!-- Artículo 1 -->
+  <div class="articulo-seccion">
+    <h2># El significado del nombre Yah Elohim</h2>
+    <p>El nombre <strong>Yah Elohim</strong> posee un profundo significado espiritual. En las Escrituras, "Elohim" hace referencia al Dios Creador, aquel que posee toda autoridad y poder sobre el universo. El nombre "Yah" es reconocido como una forma abreviada del nombre divino utilizado en numerosos pasajes bíblicos, representando la eternidad, la santidad y la fidelidad del Creador.</p>
+    <p>Desde el comienzo de la creación, Yah Elohim se revela como un Dios que habla, ordena y todo cuanto pronuncia llega a existir. No necesita herramientas ni fuerzas externas para crear; basta su voluntad para que la luz aparezca, las aguas se separen, la tierra produzca vida y los cielos sean adornados con el sol, la luna y las estrellas. Esta autoridad absoluta distingue a Yah Elohim de cualquier otra representación humana de divinidad.</p>
+  </div>
+
+  <!-- Artículo 2 -->
+  <div class="articulo-seccion">
+    <h2># La creación: Una manifestación de su sabiduría infinita</h2>
+    <p>Cuando observamos la naturaleza, descubrimos evidencias de un diseño extraordinario. Los océanos mantienen un equilibrio perfecto, las montañas permanecen firmes durante siglos, los ríos alimentan la vida y los bosques purifican el aire que respiramos. Todo parece funcionar bajo leyes precisas que reflejan orden y propósito.</p>
+    <p>Las Escrituras enseñan que Yah Elohim creó el universo con sabiduría perfecta. Cada ser vivo posee características únicas que le permiten cumplir una función dentro del ecosistema. Las aves migran siguiendo rutas sorprendentes, las estaciones del año mantienen ciclos constantes y el cuerpo humano funciona mediante procesos extraordinariamente complejos.</p>
+    <p>Lejos de ser producto del azar, la creación manifiesta la inteligencia, el poder y la grandeza del Creador. Cada amanecer recuerda que Yah Elohim sostiene el universo con su autoridad y permite que la vida continúe día tras día.</p>
+  </div>
+
+  <!-- Artículo 3 -->
+  <div class="articulo-seccion">
+    <h2># El ser humano dentro del propósito divino</h2>
+    <p>Entre todas las criaturas, el ser humano ocupa un lugar especial dentro de la creación. Según las Escrituras, fue formado con dignidad y recibió la responsabilidad de cuidar la tierra y administrar los recursos naturales con sabiduría.</p>
+    <p>Esta responsabilidad implica proteger el medio ambiente, respetar la vida y convivir en armonía con los demás. Cuando el ser humano actúa con justicia, compasión y honestidad, refleja los principios establecidos por Yah Elohim desde el principio de la creación.</p>
+    <p>La verdadera grandeza no consiste únicamente en el conocimiento o el poder material, sino en desarrollar un carácter basado en la verdad, la humildad, la misericordia y el amor hacia el prójimo.</p>
+  </div>
+
+  <!-- Artículo 4 -->
+  <div class="articulo-seccion">
+    <h2># El amor y la misericordia de Yah Elohim</h2>
+    <p>Uno de los atributos más admirables de Yah Elohim es su misericordia. A lo largo de las Escrituras se presenta como un Dios paciente, dispuesto a perdonar y a ofrecer nuevas oportunidades a quienes buscan sinceramente volver a Él.</p>
+    <p>Su amor no depende de la riqueza, la posición social o la nacionalidad de las personas. Su invitación es universal: vivir conforme a la justicia, apartarse del mal y caminar por el sendero de la verdad.</p>
+    <p>Este amor se manifiesta diariamente mediante el regalo de la vida, la provisión de los alimentos, la belleza de la naturaleza, la familia, la amistad y la oportunidad de comenzar cada nuevo día con esperanza.</p>
+  </div>
+
+  <!-- Artículo 5 -->
+  <div class="articulo-seccion">
+    <h2># La armonía entre la humanidad y la naturaleza</h2>
+    <p>Toda la creación funciona mediante un equilibrio admirable. Los árboles producen el oxígeno que respiramos; las lluvias alimentan los cultivos; los océanos regulan el clima; los animales cumplen funciones esenciales para mantener la estabilidad de los ecosistemas.</p>
+    <p>Cuando el ser humano destruye irresponsablemente la naturaleza, rompe parte de esa armonía establecida desde el principio. Cuidar el planeta no representa solamente una necesidad ambiental; también constituye un acto de responsabilidad hacia la obra creada por Yah Elohim.</p>
+    <p>Proteger los ríos, conservar los bosques, evitar la contaminación y respetar la vida animal son acciones que reflejan gratitud hacia el Creador y compromiso con las generaciones futuras.</p>
+  </div>
+
+  <!-- Artículo 6 -->
+  <div class="articulo-seccion">
+    <h2># La importancia de estudiar las Escrituras</h2>
+    <p>Conocer a Yah Elohim requiere dedicar tiempo al estudio de las Sagradas Escrituras. En ellas se encuentran enseñanzas sobre la creación, la historia del pueblo de Israel, los profetas, la sabiduría, la justicia y las promesas divinas.</p>
+    <p>El estudio constante fortalece la fe, ayuda a comprender mejor los acontecimientos de la vida y permite desarrollar una relación más profunda con el Creador. No basta con conocer información; es necesario poner en práctica los principios de amor, honestidad, humildad y servicio enseñados en la Palabra.</p>
+    <p>Cada lectura ofrece nuevas oportunidades para crecer espiritualmente y comprender con mayor claridad el propósito de Yah Elohim para la humanidad.</p>
+  </div>
+
+  <!-- ===== FOOTER con mención de rabino y desarrollador web ===== -->
+  <div class="footer-blog">
+    <p style="color: #b8d9ff;">🌿 Yah Elohim · Creador del cielo y la tierra · Su poder restaura, su amor redime. <br>
+    <span style="color: #dbbd7a;">“Escucha, Israel: Yahvé nuestro Elohim, Yahvé uno es”</span> (Deuteronomio 6:4)</p>
+    <div class="rabino-dev">
+      ✡️ <i>Romer Rafael Ayala Cuevas</i> · Rabino y Desarrollador Web
+    </div>
+    <p style="margin-top: 14px; font-size: 0.85rem; color: #6d93bb;">© 2026 · Todos los derechos reservados · Fe, Código y Torá</p>
+  </div>
+
+</div>
+
+<!-- ===== script.js ===== -->
+<script>
+  (function() {
+    console.log("🕯️ Yah Elohim · Blog de Armonía y Poder · Rabino Romero Rafael Ayala Cuevas (Desarrollador Web)");
+
+    const cards = document.querySelectorAll('.entrada-card');
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', function(e) {
+        this.style.transition = '0.2s';
+        this.style.backgroundColor = '#1f4a77';
+        setTimeout(() => { this.style.backgroundColor = ''; }, 300);
+        console.log(`📖 Entrada ${idx+1}: ${this.querySelector('h3')?.innerText || ''}`);
+      });
+    });
+
+    const menuLinks = document.querySelectorAll('.menu-servicio a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const texto = this.innerText.trim();
+        alert(`📜 Sección: ${texto}\n\n“Yah Elohim guía nuestros pasos.”\nRabino Romer Rafael Ayala Cuevas`);
+      });
+    });
+
+    const celDiv = document.querySelector('.cel');
+    if (celDiv) {
+      celDiv.style.cursor = 'pointer';
+      celDiv.addEventListener('click', function() {
+        const numero = '809-215-4245';
+        navigator.clipboard?.writeText(numero).then(() => {
+          alert('📱 Número copiado: ' + numero);
+        }).catch(() => {
+          alert('📱 Contacto: ' + numero);
+        });
+      });
+    }
+  })();
+</script>
+</body>
+</html
